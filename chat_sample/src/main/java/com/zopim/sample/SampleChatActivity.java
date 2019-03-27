@@ -9,6 +9,7 @@ import android.support.v7.widget.Toolbar;
 
 import com.zopim.android.sdk.api.Chat;
 import com.zopim.android.sdk.api.ZopimChat;
+import com.zopim.android.sdk.api.ZopimChatApi;
 import com.zopim.android.sdk.embeddable.ChatActions;
 import com.zopim.android.sdk.prechat.ChatListener;
 import com.zopim.android.sdk.prechat.PreChatForm;
@@ -33,6 +34,8 @@ public class SampleChatActivity extends AppCompatActivity implements ChatListene
         if (savedInstanceState != null) {
             return;
         }
+
+        ZopimChatApi.setServiceNotificationContentIntent(new Intent(this, SampleChatActivity.class));
 
         /**
          * If starting activity while the chat widget is actively presented the activity will resume the current chat
