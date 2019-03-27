@@ -31,6 +31,7 @@
             android:name=".SampleChatActivity"
             android:label="@string/chat_fragment_title"
             android:theme="@style/ZopimChatTheme"
+            android:launchMode="singleTask"
             android:windowSoftInputMode="stateUnspecified|adjustResize">
 
             <!-- Increase the priority to receive RESUME_CHAT intent from the chat widget. ZopimChatActivity priority is -1000. To override set yours to -999 for instance. -->
